@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_new_supcomments",
+  "info": {
+    "singularName": "announcement-new-supcomment",
+    "pluralName": "announcement-new-supcomments",
+    "displayName": "Announcement_new_supcomment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "announcement_new_supcomments"
+    },
+    "announcement_new_comment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::announcement-new-comment.announcement-new-comment",
+      "inversedBy": "announcement_new_supcomments"
+    }
+  }
+}

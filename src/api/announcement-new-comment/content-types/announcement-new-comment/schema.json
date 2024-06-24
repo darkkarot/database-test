@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcement_new_comments",
+  "info": {
+    "singularName": "announcement-new-comment",
+    "pluralName": "announcement-new-comments",
+    "displayName": "Announcement-new-comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "comment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::announcement-new.announcement-new"
+    },
+    "announcement_new_supcomments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::announcement-new-supcomment.announcement-new-supcomment",
+      "mappedBy": "announcement_new_comment"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tst_members",
+  "info": {
+    "singularName": "tst-member",
+    "pluralName": "tst-members",
+    "displayName": "tst_member"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "ชื่อสมาชิก"
+    },
+    "lastname": {
+      "type": "string",
+      "default": "นามสกุลสมาชิก"
+    },
+    "professionalNumber": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
